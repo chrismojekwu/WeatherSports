@@ -1,12 +1,11 @@
-body * {
-  box-sizing: border-box;
-}
+
 
 body {
-    font-family: Sans-Serif;
+    font-family: 'Spartan', sans-serif;
     font-size: 1.2em;
-    color:rgb(9, 144, 181);
-    background-color: #FFFFFF;
+    color:rgb(22, 6, 6);
+    /*background-color: rgb(10, 250, 190);*/
+    background: linear-gradient(45deg, #FFFF 50%,  rgb(10, 250, 190) 50%);
     padding: 0;
     margin: 0;
 }
@@ -17,75 +16,23 @@ body {
       justify-content: center;
       align-items: center;
 }
-
+.details {
+    font-size: 12px;
+    position: relative;
+    bottom: 9px;
+}
+.details2 {
+    font-size: 12px;
+    position: relative;
+    bottom: 37px;
+    text-align: center;
+}
 h1 {
   text-align: center;
 }
 
-h4 {
-  margin: 1rem 0;
-}
-
-.search-form {
-    display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-}
-
-.css-search {
-    min-width: 325px;
-    padding: .2em .5em;
-    margin: .25em 0;
-}
-
-#find-btn {
-    border:3px solid rgb(96, 94, 94);
-    background-color: rgb(96, 94, 94);
-    color: #FFFFFF;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-input[type=text] {
-    border:1px solid darkgrey;
-    outline-color: 3px solid green;
-    font-size: 1rem;
-}
-#search-label{
-    font-weight: bold;
-}
-
-.hidden {
-    display: none;
-    visibility: hidden;
-}
-
 .error {
     color: red;
-}
-
-.results {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-content: flex-start;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    box-shadow:0px 3px 5px 1px lightgray;
-    padding: 15px;
-    font-size: 1rem;
-    
-}
-.flex-container {
-    max-width: 42rem;
-    min-width: 325px;
-   
-}
-
-.user {
-    color: blue;
 }
 
 li {
@@ -98,15 +45,48 @@ li {
 ul{
     margin-top: -10px;
 }
-
-.result-item {
-  width: 100%;
-  border: 1px solid lightgray;
-  padding: .5rem;
-  border-radius: 4px;
+input[type="text"] {
+    font-size: 16px;
+    padding: 1px;
+    line-height: 18px;
+    text-align: center;
+    border-color: rgb(54, 34, 168);
+}
+input[type="text"]:hover {
+    border-color: rgb(2, 10, 10);
+    transition: 0.3s;
 }
 
-/**     ACTIVITY LIST STYLING **/
+
+input[type="button"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    line-height: 26px;
+    border: none;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: rgb(54, 34, 168);
+    transition: 0.3s;
+}
+.click {
+    margin-top: 3px;
+}
+.citybtn {
+    position: relative;
+    bottom: 17px;
+}
+form.frontpage {
+    
+    text-align: center;
+}
+
+/** ACTIVITY LIST STYLING **/
 .choices {
     height:500px;
     width: 250px;
@@ -127,13 +107,19 @@ ul{
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(95, 5, 88, 0.493);
     transition: 0.3s;
+    background-color: #FFFFFF;
 }
 .activity:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    background-color: rgba(236, 230, 230, 0.418);
+    box-shadow: 0 8px 16px 0 rgba(27, 1, 29, 0.589);
+    background-color: rgb(206, 204, 204);
+    border-color:  rgb(206, 204, 204);;
     transition: 0.7s;
+}
+.activity:hover p{
+    color: rgb(71, 89, 194);
+    transition: 0.3s;
 }
 .activity-photo {
     display: inline-block;
@@ -147,7 +133,11 @@ p.acttitle {
     font-size: 22px;
     margin-left: 20px;
     color: black;
+    position: absolute;
+    margin-top: 26px;
+    font-size: 24px;
 }
+
 
 /*****************Individual Acitivity Page******************/
 .activity-photo-big {
@@ -156,6 +146,7 @@ p.acttitle {
     margin-right: auto;
     margin-left: auto ;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
 }
 h2 {
     font-size: 16px;
@@ -170,4 +161,4 @@ a:hover {
 }
 
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/

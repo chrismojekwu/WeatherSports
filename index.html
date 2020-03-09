@@ -5,18 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather for Activities</title>
+    <title>WeatherSports</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Weather for Activities</h1>
+        <h1>WeatherSports</h1>
+        <p class ="details2">
+            Please allow a few seconds for the results to load and move forward with the "Forecast" Button
+            <br>Powered by OpenWeatherMap
+        </p>
 
-        <form id="js-form" class="search-form css-search">
+        <form class="frontpage">
+            <input type="text" class="citysearch">
+            <p class ="details">Get weather and suggestions for a specified city</p>
+            <input class="citybtn" type="button" value="Search By City">
            
-            <input class="click" type="button" value="Use Current Location">
+            <input class="click" type="button" value="Geolocation">
+            <p class ="details">Get weather and suggestions for your current location using Geolocation</p>
             <input class="forecast" type="button" value="Forecast">
             <section class ="location">
         </form>

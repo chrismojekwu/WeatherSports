@@ -4,10 +4,8 @@
 let activityStorage= [
 {activity:"Sailing",
 maxTemperatureLow:0,
-probabilityOfPrecipitation:100,
+probabilityOfPrecipitation:5,
 windSpeed:15,
-waveHeight:7,
-visibility:1852,
 describe:"Sailing is ...",
 image:"img/sailing.jpg",
 imageico:"img/sailingico.jpg",
@@ -17,10 +15,8 @@ activityTense: 'sail.'
 {
 activity:"Hiking",
 maxTemperatureLow:0,
-probabilityOfPrecipitation:100,
+probabilityOfPrecipitation:5,
 windSpeed:100,
-waveHeight:100,
-visibility:0,
 describe:"Hiking is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -32,10 +28,8 @@ activityTense: 'hike.'
 {
 activity:"Fishing",
 maxTemperatureLow:0,
-probabilityOfPrecipitation:60,
+probabilityOfPrecipitation:5,
 windSpeed:10,
-waveHeight:2,
-visibility:0,
 describe:"Fishing is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -47,7 +41,7 @@ activityTense: 'fish.'
 {
 activity:"Drone_Flying",
 maxTemperatureLow:100,
-probabilityOfPrecipitation:10,
+probabilityOfPrecipitation:2,
 windSpeed:10,
 waveHeight:100,
 visibility:0,
@@ -63,10 +57,8 @@ activityTense: 'fly a drone.'
 {
 activity:"Kite_Flying",
 maxTemperatureLow:32,
-probabilityOfPrecipitation:40,
+probabilityOfPrecipitation:1,
 windSpeed:100,
-waveHeight:0,
-visibility:1609,
 describe:"Kite flying is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -79,10 +71,8 @@ activityTense: 'fly a kite.'
 {
 activity:"Star_Gazing",
 maxTemperatureLow:32,
-probabilityOfPrecipitation:75,
+probabilityOfPrecipitation:2,
 windSpeed:100,
-waveHeight:100,
-visibility:241140,
 describe:"Star gazing is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -95,10 +85,8 @@ activityTense: 'gaze at the stars.'
 {
 activity:"Baseball",
 maxTemperatureLow:45,
-probabilityOfPrecipitation:30,
+probabilityOfPrecipitation:1,
 windSpeed:100,
-waveHeight:100,
-visibility:0,
 describe:"baseball is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -111,10 +99,8 @@ activityTense: 'play baseball.'
 {
 activity:"Rock_Climbing",
 maxTemperatureLow:40,
-probabilityOfPrecipitation:75,
+probabilityOfPrecipitation:1,
 windSpeed:100,
-waveHeight:100,
-visibility:0,
 describe:"Rock Climbing is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -127,10 +113,8 @@ activityTense: 'rock climb.'
 {
 activity:"Cycling",
 maxTemperatureLow:50,
-probabilityOfPrecipitation:80,
+probabilityOfPrecipitation:3,
 windSpeed:5,
-waveHeight:100,
-visibility:0,
 describe:"Cycling is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -143,10 +127,8 @@ activityTense: 'bike.'
 {
 activity:"Motorcycling",
 maxTemperatureLow:60,
-probabilityOfPrecipitation:60,
+probabilityOfPrecipitation:2,
 windSpeed:10,
-waveHeight:100,
-visibility:0,
 describe:"Motorcyling is ...",
 photo:"placeholder",
 links:"placeholderForLinks",
@@ -158,10 +140,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Skateboarding",
   maxTemperatureLow:40,
-  probabilityOfPrecipitation:30,
+  probabilityOfPrecipitation:1,
   windSpeed:5,
-  waveHeight:100,
-  visibility:0,
   describe:"Skateboarding is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -173,10 +153,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Running",
   maxTemperatureLow:20,
-  probabilityOfPrecipitation:80,
+  probabilityOfPrecipitation:3,
   windSpeed:10,
-  waveHeight:100,
-  visibility:0,
   describe:"Running is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -188,10 +166,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Basketball",
   maxTemperatureLow:40,
-  probabilityOfPrecipitation:60,
+  probabilityOfPrecipitation:1,
   windSpeed:30,
-  waveHeight:100,
-  visibility:0,
   describe:"Basketball is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -203,10 +179,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Golf",
   maxTemperatureLow:50,
-  probabilityOfPrecipitation:20,
+  probabilityOfPrecipitation:1,
   windSpeed:30,
-  waveHeight:100,
-  visibility:0,
   describe:"Golf is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -218,10 +192,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Football",
   maxTemperatureLow:10,
-  probabilityOfPrecipitation:80,
-  windSpeed:10,
-  waveHeight:100,
-  visibility:20,
+  probabilityOfPrecipitation:3,
+  windSpeed:40,
   describe:"Football is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -233,10 +205,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Tennis",
   maxTemperatureLow:55,
-  probabilityOfPrecipitation:20,
-  windSpeed:30,
-  waveHeight:100,
-  visibility:0,
+  probabilityOfPrecipitation:1,
+  windSpeed:15,
   describe:"Tennis is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -248,10 +218,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Soccer",
   maxTemperatureLow:55,
-  probabilityOfPrecipitation:20,
-  windSpeed:10,
-  waveHeight:100,
-  visibility:0,
+  probabilityOfPrecipitation:3,
+  windSpeed:15,
   describe:"Soccer is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -263,10 +231,8 @@ activityTense: 'go for a ride.'
 {
   activity:"Surfing",
   maxTemperatureLow:40,
-  probabilityOfPrecipitation:90,
-  windSpeed:10,
-  waveHeight:10,
-  visibility:0,
+  probabilityOfPrecipitation:4,
+  windSpeed:20,
   describe:"Surfing is ...",
   photo:"placeholder",
   links:"placeholderForLinks",
@@ -279,58 +245,54 @@ activityTense: 'go for a ride.'
 let doableActivities=[];
 
 //Test against weather properties
-function canIDoIt(tempNum,precipNum,windNum,waveNum,sightNum){
+function canIDoIt(temp,wind,rain){
   let newArray = [];
   let qualifiedArray = [];
 
   for(let i = 0 ; i < activityStorage.length; i++)
   {
-    if(tempNum >= activityStorage[i].maxTemperatureLow 
-      && precipNum <= activityStorage[i].probabilityOfPrecipitation 
-      && windNum <= activityStorage[i].windSpeed 
-      && waveNum <= activityStorage[i].waveHeight 
-      /*&& sightNum <= activityStorage[i].visibility*/)
+    if(temp >= activityStorage[i].maxTemperatureLow 
+      && rain <= activityStorage[i].probabilityOfPrecipitation 
+      && wind <= activityStorage[i].windSpeed)
     {
       newArray.push(activityStorage[i]);
-      qualifiedArray.push(activityStorage[i]);
+      
       
     }
   }
   
   
-  suggestedActivities(newArray,qualifiedArray);
+  suggestedActivities(newArray);
+  console.log(newArray)
 }
 //console.log(weatherForecast);
 
 //Updates Dom with confirmation of being able to do something
-function displayResults(responseJson) {
+function formatResults(responseJson) {
        //$('.js-results').html('');
        $(responseJson).ready(function () {
        $('.loading').addClass('hidden');
-       
-      
-    })
-    let apTemp = Math.round((responseJson.properties.maxTemperature.values[0].value * 1.8) + 32) ;
-    let precip = responseJson.properties.probabilityOfPrecipitation.values[0].value;
-    let wind = Math.round(responseJson.properties.windSpeed.values[0].value);
-    let wave = Math.round(responseJson.properties.waveHeight.values[0].value);
-    let sight = 0;
-    if(responseJson.properties.visibility.values === null 
-      || responseJson.properties.visibility.values === undefined
-      || responseJson.properties.visibility.values === [] ){
-        sight = 0;
-      } else {
-    sight = Math.round(responseJson.properties.visibility);
-      }
+     })
+    let condition = responseJson.weather[0].main;
+    let temp = Math.round(responseJson.main.temp);
+    let tempMin = Math.round(responseJson.main.temp_min);
+    let tempMax = Math.round(responseJson.main.temp_max);
+    let wind = Math.round(responseJson.wind.speed);
+    let rain = Math.round(responseJson.rain['1h'])
+    let humid = Math.round(responseJson.main.humidity);
     
     
-    let activitiesList = canIDoIt(apTemp,precip,wind,wave,sight);
-    doableActivities = canIDoIt(apTemp,precip,wind,wave,sight);
+    
+    
+    
+    //let activitiesList = canIDoIt(temp,wind,rain);
+    //doableActivities = canIDoIt(temp,wind,rain);
     
     
     //send information to forecast page
-    forecast(apTemp,precip,wind,wave,sight);
-    console.log(activitiesList)
+    forecast(condition,temp,tempMin,tempMax,wind,humid);
+    canIDoIt(temp,wind,rain);
+    //console.log(activitiesList)
     
 
     
@@ -340,13 +302,14 @@ function displayResults(responseJson) {
 
 }
 
-function forecast(apTemp,precip,wind,wave,sight){
+function forecast(condition,temp,tempMin,tempMax,wind,humid){
  let forecastHtml = `<h1>Forecast</h1>
- <p>Temperature: ${apTemp} F°
- <br>Precipitation Chance: ${precip}%
+ <p>Condition: ${condition}
+ <br>Temperature: ${temp} F°
+ <br class="highlow">High: ${tempMin} F° Low: ${tempMax} F°
  <br>Wind Speed: ${wind} Mph
- <br>Wave Height: ${wave}m
-</p>
+ <br>Humidity: ${humid} %
+ </p>
  <input type="button" class="activites" value="Suggested Activites">`
  
  $('.forecast').on('click', e => {
@@ -355,10 +318,10 @@ function forecast(apTemp,precip,wind,wave,sight){
  })
 }
 
-function suggestedActivities(doableStuff,qualifiedArray){
+function suggestedActivities(newArray,qualifiedArray){
 let qualifiedActivities = 
 `
-<h1>Look at what you can do</h1>
+<h1>Activities</h1>
 <section class= "activitiesList">
 
 <ul class="js-suggested">
@@ -366,17 +329,17 @@ let qualifiedActivities =
 `
 
  $('.container').on('click', '.activites', e => {
-     console.log(doableStuff)
+     console.log(newArray)
      $('.container').html(qualifiedActivities)
      
       
-     for(let i = 0; i < doableStuff.length; i++){
-      let activityCorrected = doableStuff[i].activity.replace("_", " ")
+     for(let i = 0; i < newArray.length; i++){
+      let activityCorrected = newArray[i].activity.replace("_", " ")
 
     $(".js-suggested").append(
-      `<div class="${doableStuff[i].activity} activity">
+      `<div class="${newArray[i].activity} activity">
       
-      <img src=${doableStuff[i].imageico} class="activity-photo">
+      <img src=${newArray[i].imageico} class="activity-photo">
       
       <p class="acttitle">${activityCorrected}</p>
     </div>
@@ -385,43 +348,43 @@ let qualifiedActivities =
 
       
     }
-      activityPages(doableStuff)
+      activityPages(newArray)
  })
 }
 
-function activityPages(doableStuff){
-  for(let i = 0; i < doableStuff.length; i++){
-   $(`.${doableStuff[i].activity}.activity`).on('click', e=>{
-    let activityCorrected = doableStuff[i].activity.replace("_", " ")
-     let corrected2 = activityCorrected.toLowerCase();
+function activityPages(newArray){
+  for(let i = 0; i < newArray.length; i++){
+   $(`.${newArray[i].activity}.activity`).on('click', e=>{
+    let activityCorrected = newArray[i].activity.replace("_", " ")
+     //let corrected2 = activityCorrected.toLowerCase();
     let pageHtml = `<h1>${activityCorrected}</h1>
   
-    <img src=${doableStuff[i].image} class="activity-photo-big" >
+    <img src=${newArray[i].image} class="activity-photo-big" >
       </div>
- <br><h2>Here are some links you may find helpful if youre going outside to ${doableStuff[i].activityTense}</h2>
+ <br><h2>Here are some links you may find helpful if youre going outside to ${newArray[i].activityTense}</h2>
   <ul>
-      <li><a target="_blank" href='https://duckduckgo.com/?t=ffab&q=${doableStuff[i].activity}+near+me&ia=places'> ${activityCorrected} Search</a></li>
-      <li><a target="_blank" href='https://en.wikipedia.org/wiki/${doableStuff[i].activity}'>${activityCorrected} Wiki</a> </li>
+      <li><a target="_blank" href='https://duckduckgo.com/?t=ffab&q=${newArray[i].activity}+near+me&ia=places'> ${activityCorrected} Search</a></li>
+      <li><a target="_blank" href='https://en.wikipedia.org/wiki/${newArray[i].activity}'>${activityCorrected} Wiki</a> </li>
   </ul>
   <input class="back" type="button" value="Back">
   <input class="home" type="button" value="Home">`
     
-    console.log(`${doableStuff[i].activity}`)
+    console.log(`${newArray[i].activity}`)
 
     $('.container').html(pageHtml)
 
   })
    
   }
-  backButton(doableStuff);
+  backButton(newArray);
 }
 
-function backButton(doableStuff){
+function backButton(newArray){
 $('.container').on('click',".back", e=> {
       
     let qualifiedActivities = 
     `
-    <h1>Look at what you can do</h1>
+    <h1>Activities</h1>
     <section class= "activitiesList">
 
     <ul class="js-suggested">
@@ -430,12 +393,12 @@ $('.container').on('click',".back", e=> {
 $('.container').html(qualifiedActivities)
      
       
-     for(let i = 0; i < doableStuff.length; i++){
-      let activityCorrected = doableStuff[i].activity.replace("_", " ")
+     for(let i = 0; i < newArray.length; i++){
+      let activityCorrected = newArray[i].activity.replace("_", " ")
     $(".js-suggested").append(
-      `<div class="${doableStuff[i].activity} activity">
+      `<div class="${newArray[i].activity} activity">
       
-      <img src=${doableStuff[i].imageico} class="activity-photo">
+      <img src=${newArray[i].imageico} class="activity-photo">
       
       <p class="acttitle">${activityCorrected}</p>
     </div>
@@ -444,11 +407,8 @@ $('.container').html(qualifiedActivities)
 
       
     }
-    /*console.log(qualifiedArray.length);  
-    for(let i = 0; i < qualifiedArray.length; i++){
-      $('.activitiesList').append(qualifiedArray[i].html)
-      }  */
-      activityPages(doableStuff)
+   
+   activityPages(newArray)
 
       
     
@@ -464,77 +424,52 @@ function activitylisted(){
 }
 
 
-
-/*
-
-//    MediaWiki API 
-
-function wikiSearch(searchterm){
-var url = "https://en.wikipedia.org/w/api.php"; 
-
-var params = {
-    action: "opensearch",
-    search: searchterm,
-    limit: "1",
-    namespace: "0",
-    format: "json"
-};
-
-url = url + "?origin=*";
-Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
-
-fetch(url)
-    .then(function(response){return response.json();})
-    .then(function(response) {
-      $('.js-results').append(`<a href=${response[3]} class = "js-wiki"> ${response[3]}</a>`)
-      })
-    .catch(function(error){console.log(error);});
-        
-         
-           
-        
-
-}*/
-
-
 //Uses the user input of thier coordinates to find the weather grid area to report on.
-function getWeather(coords) {
-    const url = `https://api.weather.gov/points/${coords}/`
-    fetch(url)
+function getWeather(latt,long) {
+   // const url = `https://api.weather.gov/points/${coords}/`
+    const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latt}&lon=${long}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
+    fetch(url2)
         .then(response => {
             if (response.ok) {
                 return response.json();
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => getGridData(responseJson.properties.forecastGridData))
+        .then(data => {
+
+          formatResults(data)
+          //console.log(data.rain['1h'])
+          
+        }
+          )
         .catch(err => {
-            displayError(err.message);
+            //displayError(err.message);
         });
          
 } 
+function getWeather2(city) {
+  
+   const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
+   fetch(url2)
+       .then(response => {
+           if (response.ok) {
+               return response.json();
+           }
+           throw new Error(response.statusText);
+       })
+       .then(data => {
 
-//Gets actual weather properties to examine
-function getGridData(newURL) {
-    const url = newURL;
-    fetch(url)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error(response.statusText);
-        })
-        
-        //let latt = user.latitude; let long = user.longitude; let lat = parseFloat(latt.toFixed(6)); let lon = parseFloat(long.toFixed(6));
-        .then(responseJson => 
+         formatResults(data)
          
-         displayResults(responseJson)
-        )
-        /*.catch(err => {
-            displayError(err.message);
-        });*/
+         
+       }
+         )
+       .catch(err => {
+           //displayError(err.message);
+       });
         
-}
+} 
+
 
 
 //HTML for error scenario
@@ -570,9 +505,9 @@ function relayPosition(user){
     console.log(latt,long)
 
     //the rest of the code in this function and display position isnt needed
-    let coords = latt + "," + long;
+    //let coords = latt + "," + long;
 
-    getWeather(coords)
+    getWeather(latt,long)
 };
 
 function displayPosition(string){
@@ -581,6 +516,17 @@ function displayPosition(string){
 
 }
 
+function citySearch(){
+  
+
+  $('.citybtn').on('click', e => {
+    e.preventDefault();
+    let city = $('.citysearch').val().trim();
+    getWeather2(city)
+  })
+}
+
 getPos();
-activitylisted();
+citySearch();
+//activitylisted();
 
