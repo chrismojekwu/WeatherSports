@@ -242,7 +242,45 @@ activityTense: 'go for a ride.'
   }
 ];
 
-let doableActivities=[];
+//Uses the user input of thier coordinates to find the weather grid area to report on.
+function getWeather(latt,long) {
+  
+   const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latt}&lon=${long}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
+   fetch(url2)
+       .then(response => {
+        return response.json();
+        //if(response.ok){
+          //return response.json();
+        //} else {
+          //throw new Error(response.statusText);
+        //}
+           })
+       .then(data => {
+         formatResults(data)
+         })
+       .catch(error => {
+           //displayError(err.message);
+       });
+        
+} 
+function getWeather2(city) {
+ 
+  const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
+  fetch(url2)
+      .then(response => {
+        return response.json();
+         })
+      .then(data => { 
+        if(data.cod != 200){
+          alert('Error');
+        }else {
+       formatResults(data)}
+        })
+      //.catch(error => {
+      //    alert('Error')
+      //});
+       
+} 
 
 //Test against weather properties
 function canIDoIt(temp,wind,rain){
@@ -268,18 +306,32 @@ function canIDoIt(temp,wind,rain){
 //console.log(weatherForecast);
 
 //Updates Dom with confirmation of being able to do something
-function formatResults(responseJson) {
+function formatResults(data) {
        //$('.js-results').html('');
-       $(responseJson).ready(function () {
+       $(data).ready(function () {
        $('.loading').addClass('hidden');
      })
-    let condition = responseJson.weather[0].main;
-    let temp = Math.round(responseJson.main.temp);
-    let tempMin = Math.round(responseJson.main.temp_min);
-    let tempMax = Math.round(responseJson.main.temp_max);
-    let wind = Math.round(responseJson.wind.speed);
-    let rain = Math.round(responseJson.rain['1h'])
-    let humid = Math.round(responseJson.main.humidity);
+    let condition = data.weather[0].main;
+    let temp = Math.round(data.main.temp);
+    let tempMin = Math.round(data.main.temp_min);
+    let tempMax = Math.round(data.main.temp_max);
+    let wind = Math.round(data.wind.speed);
+    let rain = rainValidate(data);
+    
+    function rainValidate(data){
+      if(data.hasOwnProperty('rain') === false){
+        return 0;
+      } else if(data.hasOwnProperty('rain') === true){
+        return Math.round(Object.values(data.rain['1h'])) ||
+        Math.round(Object.values(data.rain['3h']));
+      }
+    }
+    
+    //else if(data.hasOwnProperty('rain') === true) {
+      //rain = Math.round(data.rain[0]);
+   // }
+    
+    let humid = Math.round(data.main.humidity);
     
     
     
@@ -424,51 +476,7 @@ function activitylisted(){
 }
 
 
-//Uses the user input of thier coordinates to find the weather grid area to report on.
-function getWeather(latt,long) {
-   // const url = `https://api.weather.gov/points/${coords}/`
-    const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latt}&lon=${long}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
-    fetch(url2)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error(response.statusText);
-        })
-        .then(data => {
 
-          formatResults(data)
-          //console.log(data.rain['1h'])
-          
-        }
-          )
-        .catch(err => {
-            //displayError(err.message);
-        });
-         
-} 
-function getWeather2(city) {
-  
-   const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
-   fetch(url2)
-       .then(response => {
-           if (response.ok) {
-               return response.json();
-           }
-           throw new Error(response.statusText);
-       })
-       .then(data => {
-
-         formatResults(data)
-         
-         
-       }
-         )
-       .catch(err => {
-           //displayError(err.message);
-       });
-        
-} 
 
 
 
@@ -518,6 +526,12 @@ function displayPosition(string){
 
 function citySearch(){
   
+
+  $('.frontpage').submit('click', e => {
+    e.preventDefault();
+    let city = $('.citysearch').val().trim();
+    getWeather2(city)
+  })
 
   $('.citybtn').on('click', e => {
     e.preventDefault();
