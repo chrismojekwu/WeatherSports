@@ -322,8 +322,8 @@ function formatResults(data) {
       if(data.hasOwnProperty('rain') === false){
         return 0;
       } else if(data.hasOwnProperty('rain') === true){
-        return Math.round(Object.values(data.rain['1h'])) ||
-        Math.round(Object.values(data.rain['3h']));
+        console.log(data.rain['1h'])
+        return data.rain['1h'] || data.rain['3h'];
       }
     }
     
