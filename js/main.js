@@ -242,6 +242,8 @@ activityTense: 'go for a ride.'
   }
 ];
 
+//let currentCity = "";
+
 //Uses the user input of thier coordinates to find the weather grid area to report on.
 function getWeather(latt,long) {
   
@@ -264,7 +266,7 @@ function getWeather(latt,long) {
         
 } 
 function getWeather2(city) {
- 
+   
   const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
   fetch(url2)
       .then(response => {
@@ -272,7 +274,8 @@ function getWeather2(city) {
          })
       .then(data => { 
         if(data.cod != 200){
-          alert('Error');
+          alert('City not found. Please try again searching either by city...city,state for US...or city,country for the rest of the world.');
+          return false;
         }else {
        formatResults(data)}
         })
@@ -283,9 +286,9 @@ function getWeather2(city) {
 } 
 
 //Test against weather properties
-function canIDoIt(temp,wind,rain){
+function canIDoIt(temp,wind,rain,condition,cityName){
   let newArray = [];
-  let qualifiedArray = [];
+ 
 
   for(let i = 0 ; i < activityStorage.length; i++)
   {
@@ -293,6 +296,10 @@ function canIDoIt(temp,wind,rain){
       && rain <= activityStorage[i].probabilityOfPrecipitation 
       && wind <= activityStorage[i].windSpeed)
     {
+      activityStorage[i].temp = temp;
+      activityStorage[i].wind = wind;
+      activityStorage[i].condition = condition;
+      activityStorage[i].cityname = cityName;
       newArray.push(activityStorage[i]);
       
       
@@ -317,6 +324,8 @@ function formatResults(data) {
     let tempMax = Math.round(data.main.temp_max);
     let wind = Math.round(data.wind.speed);
     let rain = rainValidate(data);
+    let cityName = data.name;
+    //console.log(cityName)
     
     function rainValidate(data){
       if(data.hasOwnProperty('rain') === false){
@@ -343,7 +352,8 @@ function formatResults(data) {
     
     //send information to forecast page
     forecast(condition,temp,tempMin,tempMax,wind,humid);
-    canIDoIt(temp,wind,rain);
+    canIDoIt(temp,wind,rain,condition,cityName);
+    //events(cityName)
     //console.log(activitiesList)
     
 
@@ -370,7 +380,7 @@ function forecast(condition,temp,tempMin,tempMax,wind,humid){
  })
 }
 
-function suggestedActivities(newArray,qualifiedArray){
+function suggestedActivities(newArray){
 let qualifiedActivities = 
 `
 <h1>Activities</h1>
@@ -405,15 +415,21 @@ let qualifiedActivities =
 }
 
 function activityPages(newArray){
+  let currentActivity = "";
   for(let i = 0; i < newArray.length; i++){
    $(`.${newArray[i].activity}.activity`).on('click', e=>{
+    //console.log(activityStorage[i].temp,activityStorage[i].wind,activityStorage[i].condition)
     let activityCorrected = newArray[i].activity.replace("_", " ")
-     //let corrected2 = activityCorrected.toLowerCase();
-    let pageHtml = `<h1>${activityCorrected}</h1>
+    currentActivity = activityCorrected;
+
+      let pageHtml = `<h1 class ="title">${activityCorrected}</h1>
   
     <img src=${newArray[i].image} class="activity-photo-big" >
       </div>
- <br><h2>Here are some links you may find helpful if youre going outside to ${newArray[i].activityTense}</h2>
+ <br><h2>If you're going outside to ${newArray[i].activityTense} The current condition is: ${newArray[i].condition}, with an average temp of ${newArray[i].temp} F°, and a windspeed of ${newArray[i].wind} mph. </h2>
+  <br><input type="button" value="${activityCorrected} Events Nearby" class="eventbtn">
+  <p class="details">At the moment the event search is only applicable for US locations.</p>
+  <section class="eventresults"></section>
   <ul>
       <li><a target="_blank" href='https://duckduckgo.com/?t=ffab&q=${newArray[i].activity}+near+me&ia=places'> ${activityCorrected} Search</a></li>
       <li><a target="_blank" href='https://en.wikipedia.org/wiki/${newArray[i].activity}'>${activityCorrected} Wiki</a> </li>
@@ -421,14 +437,34 @@ function activityPages(newArray){
   <input class="back" type="button" value="Back">
   <input class="home" type="button" value="Home">`
     
-    console.log(`${newArray[i].activity}`)
+    //console.log(`${newArray[i].activity}`)
 
     $('.container').html(pageHtml)
-
+    events(newArray[i].cityname,activityCorrected)
   })
-   
+      
   }
   backButton(newArray);
+  //events(newArray,currentActivity)
+}
+
+function events(city,activity){
+  let cityEncode = city.replace(" ", "%20");
+  let activityEncode = activity.replace(" ", "%20");
+  let url = `https://api.amp.active.com/v2/search?query=${activityEncode}&category=event&city=${cityEncode}&api_key=bnn3vnvsfkbvzekjk44kmfkc` 
+  $('.container').on('click','.eventbtn', e => {
+   console.log(city,activity)
+     fetch(url)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data)
+      })
+
+   
+  })
+  
 }
 
 function backButton(newArray){
@@ -512,8 +548,7 @@ function relayPosition(user){
     let long = user.longitude
     console.log(latt,long)
 
-    //the rest of the code in this function and display position isnt needed
-    //let coords = latt + "," + long;
+    
 
     getWeather(latt,long)
 };
@@ -525,17 +560,23 @@ function displayPosition(string){
 }
 
 function citySearch(){
-  
-
   $('.frontpage').submit('click', e => {
     e.preventDefault();
-    let city = $('.citysearch').val().trim();
-    getWeather2(city)
+     let city = $('.citysearch').val().trim();
+     if(city === "" || Number.isInteger(parseInt(city)) === true){
+      alert("Please search either by city...city,state for US...or city,country for the rest of the world.")
+      return false;
+    }
+      getWeather2(city)
   })
 
   $('.citybtn').on('click', e => {
     e.preventDefault();
-    let city = $('.citysearch').val().trim();
+     let city = $('.citysearch').val().trim();
+     if(city === "" || Number.isInteger(parseInt(city)) === true){
+      alert("Please search either by city...city,state for US...or city,country for the rest of the world.")
+      return false;
+    }
     getWeather2(city)
   })
 }
