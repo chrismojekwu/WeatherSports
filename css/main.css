@@ -153,12 +153,37 @@ h2 {
 }
 a {
     text-decoration: none;
-    color: grey;
+    border: solid black;
+    border-width: 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    line-height: 26px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 a:hover {
     color:green;
     transition: 0.3s;
 }
-
-
-/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+.searchwiki {
+    position: relative;
+    bottom: 15px;
+}
+.back{
+    margin-bottom: 5px;
+}
+input.home {
+    background-color: rgb(18, 124, 110);
+}
+input.home:hover {
+    background-color: rgb(54, 34, 168);
+    transition: 0.5s;
+}
