@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeatherSports</title>
-
+    <title>WeatherSports</title>   
+    
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="img/weathersportsicon.png">
 </head>
 
 <body>
+    <div id="loading">
+        <!-- <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." /> ---> 
+      </div>
     <div class="container">
         <h1>WeatherSports</h1>
         <p class ="details2">
-            Please allow a few seconds for the results to load and move forward with the "Forecast" Button
-            <br>Powered by OpenWeatherMap
+            Powered by OpenWeatherMap
+            <section class ="details3"></section>
         </p>
 
         <form class="frontpage">
@@ -26,13 +30,13 @@
            
             <input class="click" type="button" value="Geolocation">
             <p class ="details">Get weather and suggestions for your current location using Geolocation</p>
-            <input class="forecast" type="button" value="Forecast">
-            <section class="location">
-        </form>
+         </form>
        
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
+    <script src="js/activities.js"></script>
     <script src="js/main.js"></script>
 </body>
 

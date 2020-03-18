@@ -1,200 +1,46 @@
 'use strict';
   
-  //Global Variable to how response outputs
-  let activityStorage= [
-    { activity:"Sailing",
-       maxTemperatureLow:0,
-        probabilityOfPrecipitation:5,
-         windSpeed:15,
-          describe:"Sailing is ...",
-           image:"img/sailing.jpg",
-            imageico:"img/sailingico.jpg",
-             activityTense: 'sail.'
-    },
-    { activity:"Hiking",
-       maxTemperatureLow:0,
-        probabilityOfPrecipitation:5,
-         windSpeed:100,
-          describe:"Hiking is ...",
-           image:"img/hiking.jpg",
-            imageico: "img/hikingico.jpg",
-             activityTense: 'hike.'
-    },
-    { activity:"Fishing",
-       maxTemperatureLow:0,
-        probabilityOfPrecipitation:5,
-         windSpeed:10,
-          describe:"Fishing is ...",
-           image:"img/fishing.jpg",
-            imageico: "img/fishingico.jpg",
-             activityTense: 'fish.'
-    },
-    { activity:"Drone_Flying",
-       maxTemperatureLow:100,
-        probabilityOfPrecipitation:2,
-         windSpeed:10,
-          describe:"Drone flying is ...",
-           image:"img/drone.jpg",
-            imageico:"img/droneico.jpg",
-             activityTense: 'fly a drone.'
-    },
-    { activity:"Kite_Flying",
-       maxTemperatureLow:32,
-        probabilityOfPrecipitation:1,
-         windSpeed:100,
-          describe:"Kite flying is ...",
-           image:"img/kite.jpg",
-            imageico:"img/kiteico.jpg",
-             activityTense: 'fly a kite.'
-    },
-    { activity:"Star_Gazing",
-       maxTemperatureLow:32,
-        probabilityOfPrecipitation:2,
-         windSpeed:100,
-          describe:"Star gazing is ...",
-           image:"img/stars.jpg",
-            imageico: "img/starsico.jpg",
-             activityTense: 'gaze at the stars.'
-    },
-    { activity:"Baseball",
-       maxTemperatureLow:45,
-        probabilityOfPrecipitation:1,
-         windSpeed:100,
-          describe:"baseball is ...",
-           image:"img/baseball.jpg",
-            imageico:"img/baseballico.jpg",
-             activityTense: 'play baseball.'
-  },
-    { activity:"Rock_Climbing",
-       maxTemperatureLow:40,
-        probabilityOfPrecipitation:1,
-         windSpeed:100,
-          describe:"Rock Climbing is ...",
-           image:"img/rock.jpg",
-            imageico:"img/rockico.jpg",
-             activityTense: 'rock climb.'
-    },
-    { activity:"Cycling",
-       maxTemperatureLow:50,
-        probabilityOfPrecipitation:3,
-         windSpeed:5,
-          describe:"Cycling is ...",
-           image:"img/cycling.jpg",
-            imageico:"img/cyclingico.jpg",
-             activityTense: 'bike.'
-    },
-    { activity:"Motorcycling",
-       maxTemperatureLow:60,
-        probabilityOfPrecipitation:2,
-         windSpeed:10,
-          describe:"Motorcyling is ...",
-           image:"img/moto.jpg",
-            imageico:"img/motoico.jpg",
-             activityTense: 'go for a ride.'
-    },
-    { activity:"Skateboarding",
-       maxTemperatureLow:40,
-        probabilityOfPrecipitation:1,
-         windSpeed:5,
-          describe:"Skateboarding is ...",
-           image:"img/skatepage.jpg",
-            imageico:"img/skateico.png",
-             activityTense: 'go skate.'
-    },
-    { activity:"Running",
-       maxTemperatureLow:20,
-        probabilityOfPrecipitation:3,
-         windSpeed:10,
-          describe:"Running is ...",
-           image:"img/runpage.jpg",
-            imageico:"img/runico.png",
-             activityTense: 'go for a run.'
-    },
-    { activity:"Basketball",
-       maxTemperatureLow:40,
-        probabilityOfPrecipitation:1,
-         windSpeed:30,
-          describe:"Basketball is ...",
-           image:"img/hooppage.jpg",
-            imageico:"img/hoopico.png",
-             activityTense: 'go play basketball.'
-    },
-    { activity:"Golf",
-       maxTemperatureLow:50,
-        probabilityOfPrecipitation:1,
-         windSpeed:30,
-          describe:"Golf is ...",
-           image:"img/golfpage.png",
-            imageico:"img/golfico.png",
-             activityTense: 'go golfing.'
-    },
-    { activity:"Football",
-       maxTemperatureLow:10,
-        probabilityOfPrecipitation:3,
-         windSpeed:40,
-          describe:"Football is ...",
-           image:"img/footpage.png",
-            imageico:"img/footico.png",
-             activityTense: 'go play football.'
-    },
-    { activity:"Tennis",
-       maxTemperatureLow:55,
-        probabilityOfPrecipitation:1,
-         windSpeed:15,
-          describe:"Tennis is ...",
-           image:"img/tennpage.jpg",
-            imageico:"img/tennico.png",
-             activityTense: 'go play tennis.'
-    },
-    { activity:"Soccer",
-       maxTemperatureLow:55,
-        probabilityOfPrecipitation:3,
-         windSpeed:15,
-          describe:"Soccer is ...",
-           image:"img/soccpage.png",
-            imageico:"img/soccico.png",
-             activityTense: 'go play soccer.'
-    },
-    { activity:"Surfing",
-       maxTemperatureLow:40,
-        probabilityOfPrecipitation:4,
-         windSpeed:20,
-          describe:"Surfing is ...",
-           image:"img/surfpage.png",
-            imageico:"img/surfico.png",
-             activityTense: 'go surfing.'
-      }
-    ];
-    
-
-
-//Uses the user input of thier coordinates to find the weather grid area to report on.
 function getWeather(latt,long) {
   
    const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latt}&lon=${long}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
-    fetch(url2)
+   
+   
+
+   fetch(url2)
        .then(response => {
         return response.json();
            })
        .then(data => {
-         formatResults(data)
+        formatResults(data)
+        $('#loading').hide();
          })      
 } 
 function getWeather2(city) {
    
   const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`
-   fetch(url2)
+  $('#loading').show();  
+  fetch(url2)
       .then(response => {
         return response.json();
          })
        .then(data => { 
          if(data.cod != 200){
-           alert('City not found. Please try again searching either by city...city,state for US...or city,country for the rest of the world.');
-            return false;
+          alertMsg2();
+           $('#loading').hide();
+           return false;
+           
              }else {
-              formatResults(data)}
+              forecast(); 
+              formatResults(data)
+              $('#loading').hide();
+            }
               })
                 } 
+
+function alertMsg2(){
+  $('.details3').empty();
+       $('.details3').append('City not found. Please try again searching either by city...city,state for US...or city,country for the rest of the world.')
+}                
 
 //Test against weather properties
 function canIDoIt(temp,wind,rain,condition,cityName){
@@ -214,21 +60,18 @@ function canIDoIt(temp,wind,rain,condition,cityName){
                }
                  suggestedActivities(newArray);
                   }
-
-
-//Updates Dom with confirmation of being able to do something
 function formatResults(data) {
     $(data).ready(function () {
        $('.loading').addClass('hidden');
         })
-         let condition = data.weather[0].main;
-          let temp = Math.round(data.main.temp);
-           let tempMin = Math.round(data.main.temp_min);
-            let tempMax = Math.round(data.main.temp_max);
-             let wind = Math.round(data.wind.speed);
-              let rain = rainValidate(data);
-               let cityName = data.name;
-                let humid = Math.round(data.main.humidity);
+        let condition = data.weather[0].main;
+        let temp = Math.round(data.main.temp);
+        let tempMin = Math.round(data.main.temp_min);
+        let tempMax = Math.round(data.main.temp_max);
+        let wind = Math.round(data.wind.speed);
+        let rain = rainValidate(data);
+        let cityName = data.name;
+        let humid = Math.round(data.main.humidity);
     
       function rainValidate(data){
        if(data.hasOwnProperty('rain') === false){
@@ -237,9 +80,7 @@ function formatResults(data) {
            return data.rain['1h'] || data.rain['3h'];
            }
             }
-    
-            //send information to forecast page
-             forecast(condition,temp,tempMin,tempMax,wind,humid);
+              forecast(condition,temp,tempMin,tempMax,wind,humid);
               canIDoIt(temp,wind,rain,condition,cityName);
               }
 
@@ -252,10 +93,8 @@ function forecast(condition,temp,tempMin,tempMax,wind,humid){
          <br>Humidity: ${humid} %
           </p>
            <input type="button" class="activites" value="Suggested Activites">`
- 
-    $('.forecast').on('click', e => {
-     $('.container').html(forecastHtml)
-      })
+
+           $('.container').html(forecastHtml);      
        }
 
 function suggestedActivities(newArray){
@@ -268,15 +107,18 @@ function suggestedActivities(newArray){
  $('.container').on('click', '.activites', e => {
   $('.container').html(qualifiedActivities)
    for(let i = 0; i < newArray.length; i++){
-    let activityCorrected = newArray[i].activity.replace("_", " ")
+    let activityCorrected = newArray[i].activity.replace("_", " ");
 
     $(".js-suggested").append(
       `<div class="${newArray[i].activity} activity">
         <img src=${newArray[i].imageico} class="activity-photo">
          <p class="acttitle">${activityCorrected}</p>
-          </div>`)
+          </div>`);
            }
-            activityPages(newArray)
+       $('.container').append(
+         '<input class="home" type="button" value="Home">')  
+           
+            activityPages(newArray);
              })
               }
 
@@ -304,7 +146,7 @@ function activityPages(newArray){
                   <input class="back" type="button" value="Back">
                    <input class="home" type="button" value="Home">`
     
-      $('.container').html(pageHtml)
+      $('.container').html(pageHtml);
        })
         }
           backButton(newArray);
@@ -318,7 +160,7 @@ function backButton(newArray){
       <section class= "activitiesList">
        <ul class="js-suggested">
         </section>`
-         $('.container').html(qualifiedActivities)
+         $('.container').html(qualifiedActivities);
      
     for(let i = 0; i < newArray.length; i++){
       let activityCorrected = newArray[i].activity.replace("_", " ")
@@ -328,41 +170,41 @@ function backButton(newArray){
            <p class="acttitle">${activityCorrected}</p>
             </div>`
              )}
-              activityPages(newArray) 
+              activityPages(newArray); 
               })
                }
 function homeButton(){
   $('.container').on('click',".home", e=> {
     location.reload();
      })
-      }               
+      }   
 
-//HTML for error scenario
 function displayError(error) {
     console.log('displayError ran');
      $('.js-results').html(`<h3 class="error">Something went wrong: ${error}</h3>`)
       $('.loading').addClass('hidden');
-       $('.js-results').removeClass('hidden')
+       $('.js-results').removeClass('hidden');
         }
 
-//relays position object
 function success(geoLocationPos){
   let user = geoLocationPos.coords;
+  console.log(user)
    relayPosition(user)
     };
 
-//calls navigator and runs sucess function
 function getPos(){
  $('.click').on('click', e =>{
+ 
   window.navigator.geolocation.getCurrentPosition(success)
+  
    })
     };
 
-//sets coordinates to varibale
 function relayPosition(user){
- let latt = user.latitude
-  let long = user.longitude
-   getWeather(latt,long)
+ let latt = user.latitude;
+  let long = user.longitude;
+  $('#loading').show(); 
+   getWeather(latt,long);
     };
 
 function displayPosition(string){
@@ -375,24 +217,38 @@ function citySearch(){
     e.preventDefault();
      let city = $('.citysearch').val().trim();
       if(city === "" || Number.isInteger(parseInt(city)) === true){
-       alert("Please search either by city...city,state for US...or city,country for the rest of the world.")
+       alertMsg();
         return false;
          }
-          getWeather2(city)
-           })
+         
+          getWeather2(city);
+          })
 
    $('.citybtn').on('click', e => {
     e.preventDefault();
      let city = $('.citysearch').val().trim();
       if(city === "" || Number.isInteger(parseInt(city)) === true){
-       alert("Please search either by city...city,state for US...or city,country for the rest of the world.")
-        return false;
-         }
-          getWeather2(city)
+       alertMsg();
+         } 
+         getWeather2(city);
            })
+
+     function alertMsg(){
+      $('.details3').empty();
+       $('.details3').append('Please search either by city...city,state for US...or city,country for the rest of the world.')
+     }      
             }
+
+$(window).on('load',function(){
+  $('#loading').hide();
+  $('.container').ready(function(){
+    
+  })
+  
+  });
 
 getPos();
 citySearch();
+
 
 
