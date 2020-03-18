@@ -112,7 +112,7 @@
         probabilityOfPrecipitation:1,
          windSpeed:30,
           describe:"Basketball is ...",
-           image:"img/larryjohnson.jpeg",
+           image:"img/larryjohson.jpeg",
             imageico:"img/hoopico.png",
              activityTense: 'go play basketball'
     },
