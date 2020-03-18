@@ -134,7 +134,7 @@ function activityPages(newArray){
       let pageHtml = `<h1 class ="title">${activityCorrected}</h1>
        <img src=${newArray[i].image} class="activity-photo-big" >
         </div>
-         <br><h2>If you're going outside to ${newArray[i].activityTense} The current condition is: ${newArray[i].condition}, with an average temp of ${newArray[i].temp} F°, and a windspeed of ${newArray[i].wind} mph. </h2>
+         <br><h2>If you're going outside to ${newArray[i].activityTense} in ${newArray[i].cityname}. The current condition is: ${newArray[i].condition}, with an average temp of ${newArray[i].temp} F°, and a windspeed of ${newArray[i].wind} mph. </h2>
           <br>
            <a target="_blank" href="https://www.active.com/search?keywords=${activityEncode}&location=${cityEncode}&category=Activities&daterange=All+future+dates&clckmp=activecom_home_hero_activitysearch">
             ${activityCorrected} Events Nearby</a>

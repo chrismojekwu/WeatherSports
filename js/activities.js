@@ -6,7 +6,7 @@
           describe:"Sailing is ...",
            image:"img/sailing.jpg",
             imageico:"img/sailingico.jpg",
-             activityTense: 'sail.'
+             activityTense: 'sail'
     },
     { activity:"Hiking",
        maxTemperatureLow:0,
@@ -15,7 +15,7 @@
           describe:"Hiking is ...",
            image:"img/hiking.jpg",
             imageico: "img/hikingico.jpg",
-             activityTense: 'hike.'
+             activityTense: 'hike'
     },
     { activity:"Fishing",
        maxTemperatureLow:0,
@@ -24,7 +24,7 @@
           describe:"Fishing is ...",
            image:"img/fishing.jpg",
             imageico: "img/fishingico.jpg",
-             activityTense: 'fish.'
+             activityTense: 'fish'
     },
     { activity:"Drone_Flying",
        maxTemperatureLow:100,
@@ -33,7 +33,7 @@
           describe:"Drone flying is ...",
            image:"img/drone.jpg",
             imageico:"img/droneico.jpg",
-             activityTense: 'fly a drone.'
+             activityTense: 'fly a drone'
     },
     { activity:"Kite_Flying",
        maxTemperatureLow:32,
@@ -42,7 +42,7 @@
           describe:"Kite flying is ...",
            image:"img/kite.jpg",
             imageico:"img/kiteico.jpg",
-             activityTense: 'fly a kite.'
+             activityTense: 'fly a kite'
     },
     { activity:"Star_Gazing",
        maxTemperatureLow:32,
@@ -51,7 +51,7 @@
           describe:"Star gazing is ...",
            image:"img/stars.jpg",
             imageico: "img/starsico.jpg",
-             activityTense: 'gaze at the stars.'
+             activityTense: 'gaze at the stars'
     },
     { activity:"Baseball",
        maxTemperatureLow:45,
@@ -60,7 +60,7 @@
           describe:"baseball is ...",
            image:"img/baseball.jpg",
             imageico:"img/baseballico.jpg",
-             activityTense: 'play baseball.'
+             activityTense: 'play baseball'
   },
     { activity:"Rock_Climbing",
        maxTemperatureLow:40,
@@ -69,7 +69,7 @@
           describe:"Rock Climbing is ...",
            image:"img/rock.jpg",
             imageico:"img/rockico.jpg",
-             activityTense: 'rock climb.'
+             activityTense: 'rock climb'
     },
     { activity:"Cycling",
        maxTemperatureLow:50,
@@ -78,7 +78,7 @@
           describe:"Cycling is ...",
            image:"img/cycling.jpg",
             imageico:"img/cyclingico.jpg",
-             activityTense: 'bike.'
+             activityTense: 'bike'
     },
     { activity:"Motorcycling",
        maxTemperatureLow:60,
@@ -87,7 +87,7 @@
           describe:"Motorcyling is ...",
            image:"img/moto.jpg",
             imageico:"img/motoico.jpg",
-             activityTense: 'go for a ride.'
+             activityTense: 'go for a ride'
     },
     { activity:"Skateboarding",
        maxTemperatureLow:40,
@@ -96,7 +96,7 @@
           describe:"Skateboarding is ...",
            image:"img/skatepage.jpg",
             imageico:"img/skateico.png",
-             activityTense: 'go skate.'
+             activityTense: 'go skate'
     },
     { activity:"Running",
        maxTemperatureLow:20,
@@ -105,7 +105,7 @@
           describe:"Running is ...",
            image:"img/runpage.jpg",
             imageico:"img/runico.png",
-             activityTense: 'go for a run.'
+             activityTense: 'go for a run'
     },
     { activity:"Basketball",
        maxTemperatureLow:40,
@@ -114,7 +114,7 @@
           describe:"Basketball is ...",
            image:"img/hooppage.jpg",
             imageico:"img/hoopico.png",
-             activityTense: 'go play basketball.'
+             activityTense: 'go play basketball'
     },
     { activity:"Golf",
        maxTemperatureLow:50,
@@ -123,7 +123,7 @@
           describe:"Golf is ...",
            image:"img/golfpage.png",
             imageico:"img/golfico.png",
-             activityTense: 'go golfing.'
+             activityTense: 'go golfing'
     },
     { activity:"Football",
        maxTemperatureLow:10,
@@ -132,7 +132,7 @@
           describe:"Football is ...",
            image:"img/footpage.png",
             imageico:"img/footico.png",
-             activityTense: 'go play football.'
+             activityTense: 'go play football'
     },
     { activity:"Tennis",
        maxTemperatureLow:55,
@@ -141,7 +141,7 @@
           describe:"Tennis is ...",
            image:"img/tennpage.jpg",
             imageico:"img/tennico.png",
-             activityTense: 'go play tennis.'
+             activityTense: 'go play tennis'
     },
     { activity:"Soccer",
        maxTemperatureLow:55,
@@ -150,7 +150,7 @@
           describe:"Soccer is ...",
            image:"img/soccpage.png",
             imageico:"img/soccico.png",
-             activityTense: 'go play soccer.'
+             activityTense: 'go play soccer'
     },
     { activity:"Surfing",
        maxTemperatureLow:40,
@@ -159,7 +159,7 @@
           describe:"Surfing is ...",
            image:"img/surfpage.png",
             imageico:"img/surfico.png",
-             activityTense: 'go surfing.'
+             activityTense: 'go surfing'
       }
     ];
     
