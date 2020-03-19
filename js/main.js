@@ -88,7 +88,7 @@ function forecast(condition,temp,tempMin,tempMax,wind,humid){
   let forecastHtml = `<h1>Forecast</h1>
      <p>Condition: ${condition}
       <br>Temperature: ${temp} F°
-       <br class="highlow">High: ${tempMin} F° Low: ${tempMax} F°
+       <br class="highlow">High: ${tempMax} F° Low: ${tempMin} F°
         <br>Wind Speed: ${wind} Mph
          <br>Humidity: ${humid} %
           </p>
