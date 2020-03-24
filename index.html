@@ -8,6 +8,7 @@
     <title>WeatherSports</title>   
     
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/png" href="img/weathersportsicon.png">
 </head>
@@ -16,7 +17,7 @@
     <div id="loading">
         <!-- <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." /> ---> 
       </div>
-    <div class="container">
+    <main class="container">
         <h1>WeatherSports</h1>
         <p class ="details2">
             Powered by OpenWeatherMap
@@ -24,19 +25,30 @@
         </p>
 
         <form class="frontpage">
-            <label for="citysearch">Search by City or City, State or City,Country</label>
-            <input type="text" class="citysearch">
+            <label for="citysearch">Search by City or City, Full State Name or City,Country</label>
+            <input type="text" id="citysearch">
             <p class ="details">Get weather and suggestions for a specified location</p>
             <input class="citybtn" type="button" value="Search">
            
             <input class="click" type="button" value="Geolocation">
             <p class ="details">Get weather and suggestions for your current location using Geolocation</p>
          </form>
+
+         <section class="forecast">
+
+         </section>
+
+         <section class="activityList">
+
+         </section>
        
-    </div>
+        </main>
+        <section class="modals">
+            
+        </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/main.js"></script>
 </body>
