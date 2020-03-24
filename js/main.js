@@ -4,8 +4,6 @@ function getWeather(latt, long) {
 
     const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latt}&lon=${long}&units=imperial&appid=b5302c127b5029d44db41bd278e83d3d`;
 
-
-
     fetch(url2)
         .then(response => {
             return response.json();
@@ -50,7 +48,6 @@ function getWeather2(city) {
 //Test against weather properties
 function canIDoIt(temp, wind, rain, condition, cityName) {
     let newArray = [];
-
 
     for (let i = 0; i < activityStorage.length; i++) {
         if (temp >= activityStorage[i].maxTemperatureLow &&
@@ -215,7 +212,7 @@ function errorMsg() {
 }
 
 
-$(window).ready(function() {
+$(document).ready(function() {
     $('#loading').hide();
     getPos();
     citySearch();   
