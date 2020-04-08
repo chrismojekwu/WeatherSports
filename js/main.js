@@ -211,7 +211,6 @@ function errorMsg() {
   $('.details3').append('There was an error retrieving the location Data, please check your connection & try again.');
 }
 
-
 $(document).ready(function() {
     $('#loading').hide();
     getPos();
