@@ -75,7 +75,7 @@
        maxTemperatureLow:60,
         probabilityOfPrecipitation:2,
          windSpeed:10,
-           image:["img/moto.jpg","Young man named Pug and other Baltimore youth posing near motorcycles, from the film 12 0'clock Boys."],
+           image:["img/moto.png","A dirt bike."],
             imageico:["img/motoico.jpg","Motorcycling Icon"],
              activityTense: 'go for a ride'
     },
