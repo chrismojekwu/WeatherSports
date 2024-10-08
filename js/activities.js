@@ -75,7 +75,7 @@
        maxTemperatureLow:60,
         probabilityOfPrecipitation:2,
          windSpeed:10,
-           image:["img/moto.png","A dirt bike."],
+           image:["img/moto.jpg","A dirt bike."],
             imageico:["img/motoico.jpg","Motorcycling Icon"],
              activityTense: 'go for a ride'
     },
